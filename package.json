@@ -30,6 +30,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "luxon": "^3.3.0"
+    "luxon": "^3.3.0",
+    "undici": "^5.22.1"
   }
 }

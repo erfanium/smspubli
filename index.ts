@@ -88,6 +88,7 @@ export class Smspubli {
     messages,
     concat,
     encoding,
+    report_url,
   }: SendParams): Promise<SendResult[]> {
     const params: ApiSendParams = {
       messages: messages.map(({ from, to, text, custom, send_at }) => ({
@@ -100,6 +101,7 @@ export class Smspubli {
       concat: concat ? 1 : 0,
       fake: this.fake ? 1 : 0,
       encoding,
+      report_url,
     };
 
     const result = this.#callApi("/send", params) as Promise<SendResult[]>;
